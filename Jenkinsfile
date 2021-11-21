@@ -2,6 +2,7 @@ pipeline {
     agent any
     parameters {
         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'BRANCH', type: 'PT_BRANCH'
+        choice(name: 'TESTING LEVEL', choices: ['smoke', 'regression', 'nightly'], description: '')
     }
     stages {
         stage('CHECKOUT') {
@@ -12,5 +13,12 @@ pipeline {
                 }
             }
         } // END OF STAGE CHECKOUT
+        stage('TESTING') {
+            steps {
+                script {
+                    sh 'echo branch: ${TESTING LEVEL}'
+                }
+            }
+        } // END OF STAGE TESTING
     }
 }
