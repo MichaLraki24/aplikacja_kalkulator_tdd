@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo branch: ${BRANCH}'
-                    checkout([$class: 'GitSCM', branches: [[name: '${params.BRANCH}']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/MichaLraki24/aplikacja_kalkulator_tdd.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '${BRANCH}']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/MichaLraki24/aplikacja_kalkulator_tdd.git']]])
                 }
             }
         } // END OF STAGE CHECKOUT
