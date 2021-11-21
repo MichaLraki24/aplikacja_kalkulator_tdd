@@ -6,7 +6,7 @@ pipeline {
                 script {
                     sh 'echo branch: $BRANCH'
                     sh 'echo ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
-                    sh 'echo git branch -a'
+                    sh 'echo git branch -r'
                     sh 'echo ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
                     
                     
