@@ -5,6 +5,9 @@ pipeline {
             steps {
                 script {
                     sh 'echo branch: $BRANCH'
+                    sh 'echo ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+                    sh 'echo git branch -a'
+                    sh 'echo ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
                     
                     
                     
